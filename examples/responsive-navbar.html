@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Flexbox Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #1c1c1c;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 16px 24px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .contact-button {
+      background: rgb(0, 188, 212);
+      border: 0;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      padding: 8px 18px;
+    }
+
+    @media (max-width: 600px) {
+      .navbar,
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="brand">LOGOBAKERY</div>
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="contact-button" type="button">Contact</button>
+    </div>
+  </header>
+</body>
+</html>
